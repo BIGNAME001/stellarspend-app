@@ -7,7 +7,7 @@ export default defineConfig({
     viewportHeight: 720,
     video: false,
     screenshotOnRunFailure: true,
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 10_000,
     // Retry once in headless (CI) runs to absorb flaky waits; no retries in
     // interactive mode so failures surface immediately while developing.
     retries: {
