@@ -202,7 +202,7 @@ export default function DashboardPage() {
       <BalancesWidget />
 
       {/* Quick Actions */}
-      <QuickActions />
+      <QuickActions onSplitBill={() => setSplitModalOpen(true)} />
 
       {/* Bill Splits */}
       <div>
