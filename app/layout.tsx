@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   description:
     "StellarSpend helps the unbanked and underbanked track spending, manage budgets, and build savings using the low-cost Stellar blockchain. No bank account required.",
   keywords: ["stellar", "blockchain", "budgeting", "finance", "XLM", "USDC", "unbanked"],
+  themeColor: "#e8b84b",
   openGraph: {
     title: "StellarSpend — Financial Freedom on the Blockchain",
     description:
