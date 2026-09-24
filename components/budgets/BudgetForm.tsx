@@ -446,6 +446,7 @@ export default function BudgetForm({ onSubmit, onCancel, initialData, isEditing 
                                         <button
                                             type="button"
                                             onClick={addCoOwners}
+                                            aria-label="Add co-owner"
                                             className="px-4 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-white font-semibold rounded-lg transition-colors whitespace-nowrap"
                                         >
                                             Add
