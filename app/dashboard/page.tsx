@@ -210,6 +210,7 @@ export default function DashboardPage() {
           <h2 className="text-2xl font-bold text-white">Split Bills</h2>
           <button
             onClick={() => setSplitModalOpen(true)}
+            aria-label="Split a bill"
             className="px-4 py-2 bg-[#e8b84b] text-black rounded-lg hover:bg-[#e8b84b]/90 transition-colors"
           >
             Split a Bill
