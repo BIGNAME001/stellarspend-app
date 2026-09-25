@@ -37,7 +37,14 @@ export default function RootLayout({
   // Keep the server-rendered HTML stable and let the client update direction/language after mount.
   return (
     <html lang="en" dir="ltr">
-      <body className="antialiased font-sans">
+      <body
+        className="antialiased font-sans"
+      >
+        <noscript>
+          <div className="p-4 bg-amber-500/10 border-b border-amber-500/20 text-amber-200 text-center text-sm">
+            Please enable JavaScript to use StellarSpend.
+          </div>
+        </noscript>
         <I18nProvider initialLanguage="en">
           <NotificationProvider>
             <ClientLayout>
