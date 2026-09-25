@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description: "Smart spending for the Stellar ecosystem",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
