@@ -7,4 +7,13 @@ describe('Button', () => {
 
     expect(screen.getByRole('button', { name: 'Open settings' })).toBeInTheDocument();
   });
+
+  it('is disabled and has cursor-not-allowed styling when disabled={true}', () => {
+    render(<Button disabled>Submit</Button>);
+
+    const button = screen.getByRole('button', { name: 'Submit' });
+
+    expect(button).toBeDisabled();
+    expect(button).toHaveClass('disabled:cursor-not-allowed');
+  });
 });
