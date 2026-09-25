@@ -157,6 +157,7 @@ export async function getGoalScheduleOnChain(
  * @param enabled - Whether round-up is enabled.
  * @param nearestUnit - The rounding unit (e.g. 1 or 5).
  * @param accountPublicKey - The owner's Stellar public key.
+ * @returns A promise that resolves when the round-up rule is configured.
  */
 export async function setRoundUpRuleOnChain(
   goalId: string,
@@ -195,6 +196,7 @@ export async function getRoundUpRuleOnChain(
  * @param transactionHash - The hash of the originating transaction.
  * @param roundUpAmount - The round-up amount to contribute.
  * @param accountPublicKey - The contributor's Stellar public key.
+ * @returns A promise that resolves when the round-up contribution is applied.
  */
 export async function applyRoundUpOnChain(
   goalId: string,
@@ -213,6 +215,7 @@ export async function applyRoundUpOnChain(
  * Pauses the contribution schedule for a savings goal on the Soroban contract.
  * @param goalId - The ID of the savings goal.
  * @param accountPublicKey - The owner's Stellar public key.
+ * @returns A promise that resolves when the schedule is paused.
  */
 export async function pauseScheduleOnChain(
   goalId: string,
@@ -229,6 +232,7 @@ export async function pauseScheduleOnChain(
  * Resumes a paused contribution schedule on the Soroban contract.
  * @param goalId - The ID of the savings goal.
  * @param accountPublicKey - The owner's Stellar public key.
+ * @returns A promise that resolves when the schedule is resumed.
  */
 export async function resumeScheduleOnChain(
   goalId: string,
@@ -245,6 +249,7 @@ export async function resumeScheduleOnChain(
  * Permanently cancels the contribution schedule for a savings goal on the Soroban contract.
  * @param goalId - The ID of the savings goal.
  * @param accountPublicKey - The owner's Stellar public key.
+ * @returns A promise that resolves when the schedule is cancelled.
  */
 export async function cancelScheduleOnChain(
   goalId: string,
@@ -311,6 +316,7 @@ export function getMockGoalsFallback(): Goal[] {
 /**
  * Persists mock savings goals to localStorage.
  * @param goals - The array of Goal objects to store.
+ * @returns Nothing.
  */
 export function setMockGoalsFallback(goals: Goal[]) {
   if (typeof window !== 'undefined') {
@@ -421,6 +427,7 @@ export async function createGoal(
  * @param goalId - The ID of the savings goal to contribute to.
  * @param amount - The amount to contribute.
  * @param statusCallback - Optional callback for progress updates.
+ * @returns A promise that resolves when the contribution is complete.
  */
 export async function contributeToGoal(
   publicKey: string,
